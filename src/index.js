@@ -7,8 +7,21 @@ function refreshWeather(response){
     let temperatureElement = document.querySelector("#temperature");
     let temperatureValue = Math.round(convertTemperature(response.data.temperature.current));
     temperatureElement.innerHTML = temperatureValue;
+    
     let cityElement = document.querySelector("#city");
     cityElement.innerHTML = response.data.city;
+
+    let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = response.data.condition.description;
+
+    let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = response.data.temperature.humidity;
+
+    let windElement = document.querySelector("#wind-speed");
+    let speed = Math.round(response.data.wind.speed * 1.609344);
+    windElement.innerHTML = speed;
+
+    //timeElement 16:32
 }
 
 function searchCity(city){
