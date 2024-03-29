@@ -12,8 +12,8 @@
 <body>
     <div class="weather-app">
    <header>
-        <form class="search-form">
-            <input class="search-form-input" type="search" placeholder="Enter a city..." required />
+        <form class="search-form" id="search-form">
+            <input class="search-form-input" id="search-form-input" type="search" placeholder="Enter a city..." required />
             <input class="search-form-button" type="submit" value="Search"/>
         </form>
    </header>
@@ -21,7 +21,7 @@
     <main>
         <div class="weather-app-data">
         <div>
-        <h1 class="weather-app-city">New York</h1>
+        <h1 class="weather-app-city" id="city">New York</h1>
         <p class="weather-app-details">
             Friday 15:00, windy
             <br />
@@ -42,5 +42,6 @@
     and <a href="https://another-weather-search.netlify.app/">hosted on Netlify</a>
 </footer>
 </div>
+<script src="src/index.js"></script>
 </body>
 </html>
