@@ -12,24 +12,28 @@
 <body>
     <div class="weather-app">
    <header>
-        <form>
-            <input type="search" placeholder="Enter a city..." required />
-            <input type="submit" value="Search"/>
+        <form class="search-form">
+            <input class="search-form-input" type="search" placeholder="Enter a city..." required />
+            <input class="search-form-button" type="submit" value="Search"/>
         </form>
    </header>
 
     <main>
+        <div class="weather-app-data">
         <div>
-        <h1>New York</h1>
-        <p>
+        <h1 class="weather-app-city">New York</h1>
+        <p class="weather-app-details">
             Friday 15:00, windy
             <br />
-            Humidity: 27%, Wind: 19mph
+            Humidity: <strong>27%</strong>, Wind: <strong>19mph</strong>
         </p>
     </div>
-    <div>
-        💨 55&deg;F
+    <div class="weather-app-temperature-container">
+        <div class="weather-app-icon">💨</div>
+        <div class="weather-app-temperature-value">55</div>
+        <div class="weather-app-unit">&deg;F</div>
     </div>
+</div> 
     </main>
 
 <footer>Created by 
