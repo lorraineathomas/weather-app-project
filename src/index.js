@@ -24,6 +24,9 @@ function refreshWeather(response){
         minutes = `0${dayTime.getMinutes()}`;
     }
     timeElement.innerHTML = `${days[dayTime.getDay()]} ${dayTime.getHours()}:${minutes}`;
+
+    let iconElement = document.querySelector("#icon");
+    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 
 function searchCity(city){
