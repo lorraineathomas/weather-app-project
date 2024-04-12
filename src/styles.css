@@ -106,5 +106,7 @@ footer {
 }
 
 .weekday {
+    border: 1px solid black;
+    padding: 15px;
     text-align: center;
 }
