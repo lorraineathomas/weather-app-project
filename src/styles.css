@@ -29,6 +29,11 @@ footer {
     
 }
 
+.row {
+    display: flex;
+    justify-content:space-evenly;
+}
+
 .search-form-button {
     background: #885df1;
     border: none;
@@ -98,4 +103,8 @@ footer {
 .weather-app-unit {
     font-size: 28px;
     margin-top: 30px;
+}
+
+.weekday {
+    text-align: center;
 }
