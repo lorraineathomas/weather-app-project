@@ -27,22 +27,6 @@ function refreshWeather(response){
 
     let iconElement = document.querySelector("#icon");
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
-    
-    let dayOne = document.querySelector(".nextDayOne");
-    dayOne.innerHTML = `${days[dayTime.getDay() + 1]}`;
-    
-    let dayTwo = document.querySelector(".nextDayTwo");
-    dayTwo.innerHTML = `${days[dayTime.getDay() + 2]}`;
-
-    let dayThree = document.querySelector(".nextDayThree");
-    dayThree.innerHTML = `${days[dayTime.getDay() + 3]}`;
-
-    let dayFour = document.querySelector(".nextDayFour");
-    dayFour.innerHTML = `${days[dayTime.getDay() + 4]}`;
-
-    let dayFive = document.querySelector(".nextDayFive");
-    dayFive.innerHTML = `${days[dayTime.getDay() + 5]}`;
-
 }
 
 function searchCity(city){
