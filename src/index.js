@@ -16,7 +16,7 @@ function refreshWeather(response){
     let speed = Math.round(response.data.wind.speed * 1.609344);
     windElement.innerHTML = speed;
 
-    /*let dayTime = new Date(response.data.time * 1000);
+    let dayTime = new Date(response.data.time * 1000);
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     timeElement = document.querySelector("#time");
     let minutes = dayTime.getMinutes();
@@ -24,33 +24,6 @@ function refreshWeather(response){
         minutes = `0${dayTime.getMinutes()}`;
     }
     timeElement.innerHTML = `${days[dayTime.getDay()]} ${dayTime.getHours()}:${minutes}`;
-    */
-    let date = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let hours = date.getHours();
-let minutes = date.getMinutes();
-let time;
-if (hours > 12) {
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  time = hours - 12 + ":" + minutes + "PM";
-} else {
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  time = `${hours}:${minutes}AM`;
-}
-let currentDateTime = `${days[date.getDay()]} ${time}`;
-document.getElementById("current-date-time").innerHTML = `${currentDateTime}`;
 
     let iconElement = document.querySelector("#icon");
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
